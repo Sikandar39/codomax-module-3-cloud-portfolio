@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sikandar Shah | Cloud Security Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Sikandar Shah
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            CYBER SECURITY • CLOUD • AWS
+        </p>
+
+        <h1>
+            Sikandar Shah
+        </h1>
+
+        <h2>
+            Cyber Security Student |
+            Aspiring Cloud Security Professional
+        </h2>
+
+        <p>
+            Building practical skills in Cloud Security,
+            AWS, Networking, Linux, and Cybersecurity.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects"
+               class="btn primary">
+                View Projects
+            </a>
+
+            <a href="{{ url_for('download_cv') }}"
+               class="btn secondary">
+                Download CV
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about" class="section">
+
+    <div class="section-title">
+
+        <span>01</span>
+
+        <h2>About Me</h2>
+
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            I’m <strong>Sikandar Shah</strong>, a Cyber Security
+            student at <strong>Abasyn University Peshawar</strong>
+            and an aspiring Cloud Security Professional with a
+            strong interest in cloud computing, AWS, networking,
+            cybersecurity, and secure infrastructure.
+        </p>
+
+        <p>
+            I focus on developing practical technical skills
+            through hands-on labs, projects, certifications,
+            and continuous learning.
+        </p>
+
+        <p>
+            My goal is to build expertise in
+            <strong>Cloud Security and Cyber Defense</strong>,
+            with a strong foundation in cloud infrastructure,
+            networking, security principles, and threat detection.
+        </p>
+
+        <p>
+            I also serve as the <strong>Founder & CEO of
+            Zero Trust Pro</strong>, a cybersecurity learning
+            community dedicated to helping students and beginners
+            develop practical knowledge through structured learning
+            and hands-on experience.
+        </p>
+
+        <div class="focus-box">
+            Learn continuously. Build practically.
+            Secure responsibly.
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="skills" class="section">
+
+    <div class="section-title">
+
+        <span>02</span>
+
+        <h2>Technical Skills</h2>
+
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <h3>Cybersecurity</h3>
+            <p>
+                Security fundamentals, threat awareness,
+                defensive security and cloud security.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>AWS & Cloud</h3>
+            <p>
+                EC2, S3, RDS, IAM, VPC, Security Groups,
+                Secrets Manager and CloudWatch.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Networking</h3>
+            <p>
+                TCP/IP, DNS, ports, routing concepts,
+                security groups and network troubleshooting.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Linux</h3>
+            <p>
+                Linux command line, users, permissions,
+                services, SSH and basic administration.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Programming</h3>
+            <p>
+                Python, Object-Oriented Programming,
+                Flask and basic application development.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Databases</h3>
+            <p>
+                SQL, PostgreSQL and database-driven
+                application development.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="certifications" class="section">
+
+    <div class="section-title">
+
+        <span>03</span>
+
+        <h2>Certifications & Learning</h2>
+
+    </div>
+
+    <div class="certification-list">
+
+        <div class="certification">
+            <h3>Google Cybersecurity Professional Certificate</h3>
+            <p>Google / Coursera</p>
+        </div>
+
+        <div class="certification">
+            <h3>CompTIA Security+ SY0-701</h3>
+            <p>Infosec</p>
+        </div>
+
+        <div class="certification">
+            <h3>AWS Cloud Solutions Architect</h3>
+            <p>Coursera</p>
+        </div>
+
+        <div class="certification">
+            <h3>AWS Fundamentals</h3>
+            <p>Coursera</p>
+        </div>
+
+        <div class="certification">
+            <h3>IBM Cybersecurity Analyst Professional Certificate</h3>
+            <p>IBM / Coursera — In Progress</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="projects" class="section">
+
+    <div class="section-title">
+
+        <span>04</span>
+
+        <h2>Projects</h2>
+
+    </div>
+
+    <div class="projects-grid">
+
+        {% for project in projects %}
+
+        <article class="project-card">
+
+            <div class="project-category">
+                {{ project[4] }}
+            </div>
+
+            <h3>
+                {{ project[1] }}
+            </h3>
+
+            <p>
+                {{ project[2] }}
+            </p>
+
+            <span class="technology">
+                {{ project[3] }}
+            </span>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<section id="experience" class="section">
+
+    <div class="section-title">
+
+        <span>05</span>
+
+        <h2>Experience</h2>
+
+    </div>
+
+    <div class="experience-list">
+
+        <div class="experience-card">
+
+            <h3>
+                Cybersecurity Intern
+            </h3>
+
+            <h4>
+                Codomax Digital Solutions
+            </h4>
+
+            <p>
+                Developing practical experience in Linux,
+                networking, AWS cloud infrastructure,
+                application deployment and cybersecurity
+                through structured technical modules and
+                hands-on projects.
+            </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>
+                Founder & CEO
+            </h3>
+
+            <h4>
+                Zero Trust Pro
+            </h4>
+
+            <p>
+                Leading a cybersecurity learning community
+                focused on structured learning, cloud
+                fundamentals, networking, cybersecurity
+                awareness and practical labs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="section contact-section">
+
+    <div class="section-title">
+
+        <span>06</span>
+
+        <h2>Contact</h2>
+
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+
+            <h3>
+                Let’s Connect
+            </h3>
+
+            <p>
+                I’m open to learning opportunities,
+                cybersecurity projects, cloud-related
+                collaboration and professional networking.
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                zerotrustpro1@gmail.com
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Sikandar39"
+                   target="_blank">
+                    github.com/Sikandar39
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/sikandar-shah-28739a404/"
+                   target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
+
+        </div>
+
+
+        <form action="{{ url_for('contact') }}"
+              method="POST"
+              class="contact-form">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Your Name"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Your Email"
+                   required>
+
+            <textarea name="message"
+                      rows="6"
+                      placeholder="Your Message"
+                      required></textarea>
+
+            <button type="submit"
+                    class="btn primary">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Sikandar Shah.
+        Built with Flask, PostgreSQL and AWS.
+    </p>
+
+    <p>
+        AWS Cloud Infrastructure:
+        EC2 • S3 • RDS • IAM • VPC • Secrets Manager • CloudWatch
+    </p>
+
+</footer>
+
+</body>
+
+</html>
