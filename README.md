@@ -41,7 +41,7 @@ The project covers:
 
 The application follows this general architecture:
 
-```text
+```
                     Internet
                        │
                        ▼
@@ -77,6 +77,7 @@ The application follows this general architecture:
         CloudWatch → Monitoring & Logs
         VPC → Network Isolation
 
+---
 Main AWS Services
 Service	Purpose
 Amazon EC2	Hosts the web application
@@ -89,8 +90,8 @@ AWS Secrets Manager	Secure database credentials
 Amazon CloudWatch	Monitoring and logging
 Nginx	Reverse proxy
 Gunicorn	Python WSGI application server
-
-
+---
+---
 💻 Technology Stack
 Application
 - Python
